@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Slide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&family=Archivo:wdth,wght@125,900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --w: 1080px; --h: 1350px; --pad: 80px;
+    --bg: #F7F8FA; --text: #111111; --accent: #0A6CFF; --muted: #6b7280;
+    --font: "Poppins", "Helvetica Neue", Arial, sans-serif;
+    --title: 96px; --sub: 48px; --body: 32px; --small: 22px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: var(--w); height: var(--h); overflow: hidden; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font);
+         position: relative; padding: var(--pad); display: flex; flex-direction: column; justify-content: center; }
+  h1 { font-size: var(--title); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; }
+  h2 { font-size: var(--sub); font-weight: 700; line-height: 1.15; }
+  p, li { font-size: var(--body); line-height: 1.4; }
+  .accent { color: var(--accent); }
+  .footer { position: absolute; left: var(--pad); right: var(--pad); bottom: 48px;
+            display: flex; justify-content: space-between; font-size: var(--small); color: var(--muted); }
+</style>
+</head>
+<body>
+  <h1>Headline <span class="accent">here</span></h1>
+  <p>Supporting line, max three lines.</p>
+  <div class="footer"><span>@yourhandle</span><span>01/05</span></div>
+</body>
+</html>
