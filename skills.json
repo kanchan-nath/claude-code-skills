@@ -1,0 +1,111 @@
+{
+  "repository": "https://github.com/kanchan-nath/claude-code-skills",
+  "description": "Production AI Agent Skills for Claude Code, Antigravity, OpenHands, and Agentic Workflows.",
+  "version": "1.0.0",
+  "skills": [
+    {
+      "name": "cold-email",
+      "aliases": [],
+      "category": "Outreach & Communication",
+      "path": "skills/cold-email/SKILL.md",
+      "description": "Build a visually styled HTML cold-outreach email (feedback requests, intros, investor/recruiter outreach) with a small vector logo mark, an accent color, light icon use, and a clickable CTA button \u2014 not a plain-text paragraph email. Use this whenever..."
+    },
+    {
+      "name": "content-ideas",
+      "aliases": [],
+      "category": "Content & Media",
+      "path": "skills/content-ideas/SKILL.md",
+      "description": "Turn a YouTube video (usually a research/informational video Kanchan watched) into individual, trackable content-idea rows inside his Notion \"Content Ideas\" database, instead of one row holding the whole transcript. Trigger this skill whenever Kancha..."
+    },
+    {
+      "name": "create-linkedin-post",
+      "aliases": [
+        "Create_Linkedin_Post",
+        "create-linkedin-post"
+      ],
+      "category": "Social & Publishing",
+      "path": "skills/create-linkedin-post/SKILL.md",
+      "description": "End-to-end LinkedIn post creation: takes a raw topic, writes a humanized post that passes AI-detection review, generates an image/carousel prompt in parallel, waits for user-supplied image, then schedules the post with media via LinkedIn API. Combine..."
+    },
+    {
+      "name": "dsa",
+      "aliases": [],
+      "category": "Software Development & Algorithms",
+      "path": "skills/dsa/SKILL.md",
+      "description": "Guides Kanchan through solving a DSA/LeetCode problem himself, one micro-step at a time, instead of giving the full solution. Trigger whenever Kanchan pastes a LeetCode/DSA question, a problem link, or says \"/dsa\", \"give me steps for this problem\", \"..."
+    },
+    {
+      "name": "hashnode",
+      "aliases": [],
+      "category": "Writing & Technical Blogging",
+      "path": "skills/hashnode/SKILL.md",
+      "description": "Write long form technical blog posts for Hashnode that rank on Google and actually get read start to finish. Use this whenever the user asks for a blog post, technical article, Hashnode post, or says things like \"write a blog on X\", \"turn this code i..."
+    },
+    {
+      "name": "job",
+      "aliases": [],
+      "category": "Career & Job Outreach",
+      "path": "skills/job/SKILL.md",
+      "description": "Write outreach messages to recruiters/hiring managers when Kanchan is applying for a job, and answer job application questions, using Kanchan's resume and the job details he provides. Style is simple, respectful, down-to-earth English, no fancy words..."
+    },
+    {
+      "name": "linkedin-humanizer",
+      "aliases": [
+        "Linkeidn_Humanizer",
+        "linkedin-humanizer"
+      ],
+      "category": "Content & Publishing",
+      "path": "skills/linkedin-humanizer/SKILL.md",
+      "description": "Writes LinkedIn posts that read as human-written, not AI-written, on any topic the user gives, then runs a strict second \"boss\" reviewer pass (AI-vs-human verdict, hook check, LinkedIn mechanics) and rewrites until it passes. Use this whenever the us..."
+    },
+    {
+      "name": "linkedin-orchestrator",
+      "aliases": [],
+      "category": "Social & Publishing",
+      "path": "skills/linkedin-orchestrator/SKILL.md",
+      "description": "End-to-end LinkedIn AI Orchestrator: converts raw ideas or transcripts into humanized, algorithm-optimized LinkedIn posts, audits against AI slop, previews for user review, and publishes directly to personal LinkedIn profiles with media attachments."
+    },
+    {
+      "name": "linkedin-post-image",
+      "aliases": [],
+      "category": "Content & Media",
+      "path": "skills/linkedin-post-image/SKILL.md",
+      "description": "Designs and exports LinkedIn post images (single-image posts, quote cards, stat cards, and multi-slide carousels) as 1080x1350 or 1080x1080 PNGs, plus an optional PDF for document-style carousels. Use when the user asks for a LinkedIn post image, car..."
+    },
+    {
+      "name": "motion-prompt-director",
+      "aliases": [],
+      "category": "AI Video & Motion Design",
+      "path": "skills/motion-prompt-director/SKILL.md",
+      "description": "Turns any product, idea or brief into a complete, production-ready prompt pack for AI video and motion-graphics generators (Google Flow / Veo, Runway, Kling, Luma, Sora, Pika), plus key-frame image prompts, a music prompt and edit notes, using the Ci..."
+    },
+    {
+      "name": "referral",
+      "aliases": [],
+      "category": "Career & Outreach",
+      "path": "skills/referral/SKILL.md",
+      "description": "Generates click-worthy referral promotion content - a LinkedIn post (hook, story, hashtags, and a follow-me CTA) plus a matching WhatsApp forward message that links to that post. Use this any time the user wants to promote a referral link, invite cod..."
+    },
+    {
+      "name": "seo",
+      "aliases": [],
+      "category": "Web & Technical SEO",
+      "path": "skills/seo/SKILL.md",
+      "description": "Elite Technical SEO Auditor powered by a comprehensive SEO knowledge base. Triggers on /seo, \"seo review\", \"audit this file for seo\", \"check seo\", \"seo score\", \"improve seo\", or any request to review, audit, or fix SEO in a frontend file or codebase...."
+    },
+    {
+      "name": "shorts-script-writer",
+      "aliases": [],
+      "category": "Video & Scriptwriting",
+      "path": "skills/shorts-script-writer/SKILL.md",
+      "description": "Turn a creator's raw, messy script, voice-note transcript, rough idea or bullet points into a polished, spoken-style script for YouTube Shorts, Instagram Reels or TikTok, under 60 seconds, in natural Indian English. Use this whenever the user pastes ..."
+    },
+    {
+      "name": "sparke-codestyle",
+      "aliases": [],
+      "category": "Software Development & Architecture",
+      "path": "skills/sparke-codestyle/SKILL.md",
+      "description": "Kanchan's Spark.E backend codestyle guide. Enforces exact patterns from the live codebase: ESM imports, asyncHandler wrapper, ApiError/ApiResponse classes, Zod safeParse validation, named exports, Mongoose + Prisma dual-DB conventions, BullMQ queue p..."
+    }
+  ]
+}

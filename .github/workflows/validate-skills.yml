@@ -1,0 +1,50 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate SKILL.md Frontmatter & Registry
+        run: |
+          python3 -c "
+          import os, glob, json
+
+          skills = [os.path.basename(d) for d in sorted(glob.glob('skills/*')) if os.path.isdir(d)]
+          assert len(skills) > 0, 'No skills found in skills/'
+
+          for skill in skills:
+              md_path = f'skills/{skill}/SKILL.md'
+              assert os.path.exists(md_path), f'Missing SKILL.md in {skill}'
+              with open(md_path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              assert content.startswith('---'), f'{md_path} must start with YAML frontmatter (---)'
+              parts = content.split('---')
+              assert len(parts) >= 3, f'{md_path} missing closing --- for frontmatter'
+              fm = parts[1]
+              assert 'name:' in fm, f'{md_path} missing name: in frontmatter'
+              assert 'description:' in fm, f'{md_path} missing description: in frontmatter'
+              print(f'✓ Validated: {skill}')
+
+          # Validate skills.json
+          assert os.path.exists('skills.json'), 'skills.json missing'
+          with open('skills.json', 'r', encoding='utf-8') as f:
+              registry = json.load(f)
+          registered_names = {s['name'] for s in registry.get('skills', [])}
+          missing_in_registry = set(skills) - registered_names
+          assert not missing_in_registry, f'Skills missing in skills.json: {missing_in_registry}'
+          print('✓ Registry validation passed!')
+          "

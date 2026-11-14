@@ -1,9 +1,10 @@
 ---
-name: Linkeidn_Humanizer
+name: linkedin-humanizer
+alias: [Linkeidn_Humanizer, linkedin-humanizer]
 description: Writes LinkedIn posts that read as human-written, not AI-written, on any topic the user gives, then runs a strict second "boss" reviewer pass (AI-vs-human verdict, hook check, LinkedIn mechanics) and rewrites until it passes. Use this whenever the user asks to write, draft, rewrite, polish, humanize, or check a LinkedIn post, caption, or build-in-public update, or says a post "sounds like AI", even if they never say "humanizer".
 ---
 
-# Linkeidn_Humanizer
+# LinkedIn Humanizer
 
 Write a LinkedIn post on the user's topic in a believable human voice, then have a separate reviewer agent judge it like a strict editor. If the reviewer says it sounds AI-written or the hook is weak, rewrite and review again.
 

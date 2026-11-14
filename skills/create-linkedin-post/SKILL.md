@@ -1,5 +1,6 @@
 ---
-name: Create_Linkedin_Post
+name: create-linkedin-post
+alias: [Create_Linkedin_Post, create-linkedin-post]
 description: "End-to-end LinkedIn post creation: takes a raw topic, writes a humanized post that passes AI-detection review, generates an image/carousel prompt in parallel, waits for user-supplied image, then schedules the post with media via LinkedIn API. Combines the Humanizer writing skill, the Image Prompting skill, and the LinkedIn Orchestrator publishing skill into one unified workflow. Use when the user says 'create a LinkedIn post', 'write a post for LinkedIn', 'LinkedIn post about...', or any variant of writing + publishing a LinkedIn post."
 ---
 
