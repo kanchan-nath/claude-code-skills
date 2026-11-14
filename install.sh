@@ -22,6 +22,7 @@ AVAILABLE_SKILLS=(
   "seo"
   "shorts-script-writer"
   "sparke-codestyle"
+  "update-claude-skills"
 )
 
 usage() {

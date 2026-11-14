@@ -1,6 +1,6 @@
 # Claude Code & Agent Skills 🧠⚡
 
-[![Skills Count](https://img.shields.io/badge/Skills-14%20Available-blue.svg)](skills.json)
+[![Skills Count](https://img.shields.io/badge/Skills-15%20Available-blue.svg)](skills.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Compatible](https://img.shields.io/badge/Compatible-Claude%20Code%20%7C%20Antigravity%20%7C%20Cursor%20%7C%20OpenHands-orange.svg)](#)
 [![Validation](https://github.com/kanchan-nath/claude-code-skills/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/kanchan-nath/claude-code-skills/actions)
@@ -49,7 +49,7 @@ curl -fsSL https://raw.githubusercontent.com/kanchan-nath/claude-code-skills/mai
 | Skill Name | Category | Primary Triggers & Commands | Description |
 |---|---|---|---|
 | [`cold-email`](skills/cold-email/SKILL.md) | Outreach | `"cold email"`, `"outreach email"`, `"style this email"` | Builds visually styled HTML cold-outreach emails with vector branding, CTA buttons, and plain-text fallback. |
-| [`content-ideas`](skills/content-ideas/SKILL.md) | Content & Media | `/content-ideas`, `"pull content ideas"`, YouTube links | Extracts distinct, actionable content ideas from YouTube videos and formats them for a Notion tracking database. |
+| [`content-ideas`](skills/content-ideas/SKILL.md) | Content & Media | `/content-ideas`, `"pull content ideas"`, transcript `.txt` / text | Turns video transcripts (pasted text or uploaded `.txt` files) into trackable content-idea rows in Notion. |
 | [`create-linkedin-post`](skills/create-linkedin-post/SKILL.md) | Social Publishing | `"create a LinkedIn post"`, `"write a post for LinkedIn"` | End-to-end LinkedIn post workflow: humanized draft, AI vs human review, image/carousel generation, and scheduling. |
 | [`dsa`](skills/dsa/SKILL.md) | Software Development | `/dsa`, LeetCode links, `"help me solve this dsa"` | DSA & LeetCode micro-step coach that guides you through problem-solving step by step without spoiling the solution. |
 | [`hashnode`](skills/hashnode/SKILL.md) | Technical Writing | `/hashnode`, `"write a blog on X"`, `"turn this code into a blog"` | Long-form technical blog posts for Hashnode optimized for search rankings, retention, and readability. |
@@ -62,6 +62,7 @@ curl -fsSL https://raw.githubusercontent.com/kanchan-nath/claude-code-skills/mai
 | [`seo`](skills/seo/SKILL.md) | Web Development | `/seo`, `"seo review"`, `"audit this file for seo"` | Technical SEO auditor for frontend files (Next.js, HTML) and full repository audits with prioritized fixes. |
 | [`shorts-script-writer`](skills/shorts-script-writer/SKILL.md) | Video & Scriptwriting | `"shorts script"`, `"reels script"`, `"under 60s"` | Transforms rough notes and bullet points into high-hook, natural spoken scripts for YouTube Shorts & Reels (<60s). |
 | [`sparke-codestyle`](skills/sparke-codestyle/SKILL.md) | Backend Architecture | `"sparke codestyle"`, backend code reviews | Backend codestyle and architectural standard enforcement (Express, Zod, BullMQ, Mongoose, Prisma). |
+| [`update-claude-skills`](skills/update-claude-skills/SKILL.md) | Repo & Skill Ops | `/update-claude-skills`, `"update skill"`, `"add skill to repo"` | Autonomous ingest and sync workflow for publishing updated or new skills to this repository and GitHub. |
 
 ---
 

@@ -2,110 +2,112 @@
   "repository": "https://github.com/kanchan-nath/claude-code-skills",
   "description": "Production AI Agent Skills for Claude Code, Antigravity, OpenHands, and Agentic Workflows.",
   "version": "1.0.0",
+  "total_skills": 15,
   "skills": [
     {
       "name": "cold-email",
-      "aliases": [],
-      "category": "Outreach & Communication",
-      "path": "skills/cold-email/SKILL.md",
-      "description": "Build a visually styled HTML cold-outreach email (feedback requests, intros, investor/recruiter outreach) with a small vector logo mark, an accent color, light icon use, and a clickable CTA button \u2014 not a plain-text paragraph email. Use this whenever..."
+      "category": "Outreach",
+      "triggers": "`/recruiter`, `/investors`, `/recruiters`",
+      "description": "Build a visually styled HTML cold-outreach email (feedback requests, intros, investor/recruiter outreach) with a small vector logo mark, an accent color, light icon use, and a clickable CTA button \u2014 not a plain-text paragraph email. Use this whenever the user asks to draft, write, or style a \"cold email,\" \"outreach email,\" \"feedback request email,\" or asks to make an email \"more visual,\" with \"icons,\" \"vector images,\" or \"look nicer,\" especially for StudeQ outreach to founders/investors/recruiters. Produces both an HTML version (for Gmail draft creation) and a plain-text fallback.",
+      "path": "skills/cold-email/SKILL.md"
     },
     {
       "name": "content-ideas",
-      "aliases": [],
       "category": "Content & Media",
-      "path": "skills/content-ideas/SKILL.md",
-      "description": "Turn a YouTube video (usually a research/informational video Kanchan watched) into individual, trackable content-idea rows inside his Notion \"Content Ideas\" database, instead of one row holding the whole transcript. Trigger this skill whenever Kancha..."
+      "triggers": "`/content-ideas`, `/upload`, `/Medium`",
+      "description": "Turn a video transcript (pasted text or an uploaded .txt file \u2014 with or without timestamps, no YouTube URL required) into individual, trackable content-idea rows inside Kanchan's Notion \"Content Ideas\" database, instead of one row holding the whole transcript. Trigger this skill whenever Kanchan pastes or uploads a transcript and asks to log it, pull content ideas from it, add it to his content ideas database, or invokes \"/content-ideas\". Also trigger if he sends a YouTube link alone (then ask him to paste/upload the transcript, since no transcript tool is assumed connected). Covers: splitting the transcript into distinct, usable content chunks and writing each as its own database row with title, source video, YouTube URL (if known), timestamp (if present in the transcript), date added, status (Pending / Done / Already Made Video), a Content Potential rating (High/Medium/Low), category, summary, and why it could work. Target database: \"Content Ideas\" inside Kanchan's \"The Rover Kanchan\" Notion page (collection://4184ee2e-9d6c-81eb-ae84-000b94df91cd).",
+      "path": "skills/content-ideas/SKILL.md"
     },
     {
       "name": "create-linkedin-post",
-      "aliases": [
-        "Create_Linkedin_Post",
-        "create-linkedin-post"
-      ],
-      "category": "Social & Publishing",
-      "path": "skills/create-linkedin-post/SKILL.md",
-      "description": "End-to-end LinkedIn post creation: takes a raw topic, writes a humanized post that passes AI-detection review, generates an image/carousel prompt in parallel, waits for user-supplied image, then schedules the post with media via LinkedIn API. Combine..."
+      "category": "Social Publishing",
+      "triggers": "`/carousel`, `create a LinkedIn post`, `write a post for LinkedIn`",
+      "description": "End-to-end LinkedIn post creation: takes a raw topic, writes a humanized post that passes AI-detection review, generates an image/carousel prompt in parallel, waits for user-supplied image, then schedules the post with media via LinkedIn API. Combines the Humanizer writing skill, the Image Prompting skill, and the LinkedIn Orchestrator publishing skill into one unified workflow. Use when the user says 'create a LinkedIn post', 'write a post for LinkedIn', 'LinkedIn post about...', or any variant of writing + publishing a LinkedIn post.",
+      "path": "skills/create-linkedin-post/SKILL.md"
     },
     {
       "name": "dsa",
-      "aliases": [],
-      "category": "Software Development & Algorithms",
-      "path": "skills/dsa/SKILL.md",
-      "description": "Guides Kanchan through solving a DSA/LeetCode problem himself, one micro-step at a time, instead of giving the full solution. Trigger whenever Kanchan pastes a LeetCode/DSA question, a problem link, or says \"/dsa\", \"give me steps for this problem\", \"..."
+      "category": "Software Development",
+      "triggers": "`/LeetCode`, `/DSA`, `/dsa`",
+      "description": "Guides Kanchan through solving a DSA/LeetCode problem himself, one micro-step at a time, instead of giving the full solution. Trigger whenever Kanchan pastes a LeetCode/DSA question, a problem link, or says \"/dsa\", \"give me steps for this problem\", \"help me solve this dsa question step by step\". Always use this skill for any DSA problem-solving request \u2014 never just dump the full code solution directly.",
+      "path": "skills/dsa/SKILL.md"
     },
     {
       "name": "hashnode",
-      "aliases": [],
-      "category": "Writing & Technical Blogging",
-      "path": "skills/hashnode/SKILL.md",
-      "description": "Write long form technical blog posts for Hashnode that rank on Google and actually get read start to finish. Use this whenever the user asks for a blog post, technical article, Hashnode post, or says things like \"write a blog on X\", \"turn this code i..."
+      "category": "Technical Writing",
+      "triggers": "`/hashnode`, `/SEO`, `write a blog on X`",
+      "description": "Write long form technical blog posts for Hashnode that rank on Google and actually get read start to finish. Use this whenever the user asks for a blog post, technical article, Hashnode post, or says things like \"write a blog on X\", \"turn this code into a blog\", \"make a technical article about Y\", \"/hashnode\", or shares a topic, a code file, or a markdown draft and expects a publish ready blog post back. Also trigger when the user pastes raw code or a README and asks to explain it as a post, or asks to improve/SEO audit an existing Hashnode draft. Input can be a topic alone, a code snippet, or a full markdown file. Output is always a complete markdown blog post, ready to paste into Hashnode.",
+      "path": "skills/hashnode/SKILL.md"
     },
     {
       "name": "job",
-      "aliases": [],
-      "category": "Career & Job Outreach",
-      "path": "skills/job/SKILL.md",
-      "description": "Write outreach messages to recruiters/hiring managers when Kanchan is applying for a job, and answer job application questions, using Kanchan's resume and the job details he provides. Style is simple, respectful, down-to-earth English, no fancy words..."
+      "category": "Career & Jobs",
+      "triggers": "`/hiring`, `/JD`, `/job`",
+      "description": "Write outreach messages to recruiters/hiring managers when Kanchan is applying for a job, and answer job application questions, using Kanchan's resume and the job details he provides. Style is simple, respectful, down-to-earth English, no fancy words, no AI-sounding phrases, no exaggeration. Trigger whenever Kanchan shares a job posting/JD along with his resume and asks to write a message to a recruiter, an outreach note for a job, a LinkedIn message about a job opening, a cold email applying for a position, or gives application form questions (like \"why this role\", \"why should we hire you\", \"tell us about yourself\") that need answers. Also trigger on phrases like \"write outreach for this job\", \"message this recruiter\", \"help me apply for X position\", \"/job\", or when Kanchan gives job details + resume + platform (LinkedIn/email/application questions) and expects a ready-to-send message or answer back.",
+      "path": "skills/job/SKILL.md"
     },
     {
       "name": "linkedin-humanizer",
-      "aliases": [
-        "Linkeidn_Humanizer",
-        "linkedin-humanizer"
-      ],
-      "category": "Content & Publishing",
-      "path": "skills/linkedin-humanizer/SKILL.md",
-      "description": "Writes LinkedIn posts that read as human-written, not AI-written, on any topic the user gives, then runs a strict second \"boss\" reviewer pass (AI-vs-human verdict, hook check, LinkedIn mechanics) and rewrites until it passes. Use this whenever the us..."
+      "category": "Content & Review",
+      "triggers": "`boss`, `sounds like AI`",
+      "description": "Writes LinkedIn posts that read as human-written, not AI-written, on any topic the user gives, then runs a strict second \"boss\" reviewer pass (AI-vs-human verdict, hook check, LinkedIn mechanics) and rewrites until it passes. Use this whenever the user asks to write, draft, rewrite, polish, humanize, or check a LinkedIn post, caption, or build-in-public update, or says a post \"sounds like AI\", even if they never say \"humanizer\".",
+      "path": "skills/linkedin-humanizer/SKILL.md"
     },
     {
       "name": "linkedin-orchestrator",
-      "aliases": [],
-      "category": "Social & Publishing",
-      "path": "skills/linkedin-orchestrator/SKILL.md",
-      "description": "End-to-end LinkedIn AI Orchestrator: converts raw ideas or transcripts into humanized, algorithm-optimized LinkedIn posts, audits against AI slop, previews for user review, and publishes directly to personal LinkedIn profiles with media attachments."
+      "category": "Social Publishing",
+      "triggers": "`\"linkedin-orchestrator\"`",
+      "description": "End-to-end LinkedIn AI Orchestrator: converts raw ideas or transcripts into humanized, algorithm-optimized LinkedIn posts, audits against AI slop, previews for user review, and publishes directly to personal LinkedIn profiles with media attachments.",
+      "path": "skills/linkedin-orchestrator/SKILL.md"
     },
     {
       "name": "linkedin-post-image",
-      "aliases": [],
-      "category": "Content & Media",
-      "path": "skills/linkedin-post-image/SKILL.md",
-      "description": "Designs and exports LinkedIn post images (single-image posts, quote cards, stat cards, and multi-slide carousels) as 1080x1350 or 1080x1080 PNGs, plus an optional PDF for document-style carousels. Use when the user asks for a LinkedIn post image, car..."
+      "category": "Media Design",
+      "triggers": "`\"linkedin-post-image\"`",
+      "description": "Designs and exports LinkedIn post images (single-image posts, quote cards, stat cards, and multi-slide carousels) as 1080x1350 or 1080x1080 PNGs, plus an optional PDF for document-style carousels. Use when the user asks for a LinkedIn post image, carousel, quote card, cheat sheet, or any visual to attach to a LinkedIn post.",
+      "path": "skills/linkedin-post-image/SKILL.md"
     },
     {
       "name": "motion-prompt-director",
-      "aliases": [],
-      "category": "AI Video & Motion Design",
-      "path": "skills/motion-prompt-director/SKILL.md",
-      "description": "Turns any product, idea or brief into a complete, production-ready prompt pack for AI video and motion-graphics generators (Google Flow / Veo, Runway, Kling, Luma, Sora, Pika), plus key-frame image prompts, a music prompt and edit notes, using the Ci..."
+      "category": "AI Video & Motion",
+      "triggers": "`make a video about X`, `write a Flow prompt`",
+      "description": "Turns any product, idea or brief into a complete, production-ready prompt pack for AI video and motion-graphics generators (Google Flow / Veo, Runway, Kling, Luma, Sora, Pika), plus key-frame image prompts, a music prompt and edit notes, using the Cinetic cinematic motion-design method (one product-specific idea, a story device, a reusable Style Bible, beat-timed shots, copy discipline, hard bans on generic AI looks). Use this whenever the user wants a prompt, shot list, storyboard, script or treatment for a launch video, product demo, feature animation or loop, logo sting or reveal, kinetic typography, teaser, trailer, intro or promo clip, or says things like \"make a video about X\", \"write a Flow prompt\", \"animate this feature\", \"I need a launch clip\", \"storyboard this\", \"make this look premium, not AI\", or pastes a video prompt to critique or rewrite. Also use it for 9:16 / 1:1 social versions, looping hero animations, and for turning a code-based motion brief into prompts for a generative tool.",
+      "path": "skills/motion-prompt-director/SKILL.md"
     },
     {
       "name": "referral",
-      "aliases": [],
       "category": "Career & Outreach",
-      "path": "skills/referral/SKILL.md",
-      "description": "Generates click-worthy referral promotion content - a LinkedIn post (hook, story, hashtags, and a follow-me CTA) plus a matching WhatsApp forward message that links to that post. Use this any time the user wants to promote a referral link, invite cod..."
+      "triggers": "`referral`, `refer a friend`",
+      "description": "Generates click-worthy referral promotion content - a LinkedIn post (hook, story, hashtags, and a follow-me CTA) plus a matching WhatsApp forward message that links to that post. Use this any time the user wants to promote a referral link, invite code, referral program, waitlist link, or any link they want people to click and share. Trigger on words like \"referral\", \"refer a friend\", \"invite link\", \"referral code\", or \"write a post to promote this link\" - even if the user only pastes a bare link with no other context, still use this skill to build the full package around it.",
+      "path": "skills/referral/SKILL.md"
     },
     {
       "name": "seo",
-      "aliases": [],
-      "category": "Web & Technical SEO",
-      "path": "skills/seo/SKILL.md",
-      "description": "Elite Technical SEO Auditor powered by a comprehensive SEO knowledge base. Triggers on /seo, \"seo review\", \"audit this file for seo\", \"check seo\", \"seo score\", \"improve seo\", or any request to review, audit, or fix SEO in a frontend file or codebase...."
+      "category": "Web Development",
+      "triggers": "`/seo`, `seo review`, `audit this file for seo`",
+      "description": "Elite Technical SEO Auditor powered by a comprehensive SEO knowledge base. Triggers on /seo, \"seo review\", \"audit this file for seo\", \"check seo\", \"seo score\", \"improve seo\", or any request to review, audit, or fix SEO in a frontend file or codebase. Use this skill whenever a user shares code files and wants SEO analysis \u2014 even if they say things like \"is this page good?\", \"check my layout file\", \"review my Next.js page\", \"optimize for search engines\", or \"what's wrong with my meta tags\". Two modes: (1) individual file review \u2014 user sends one file at a time, returns per-file score + fixes; (2) full codebase audit \u2014 user sends entire frontend, returns executive summary, prioritized issues, roadmap. Always trigger this skill before doing any SEO-related analysis.",
+      "path": "skills/seo/SKILL.md"
     },
     {
       "name": "shorts-script-writer",
-      "aliases": [],
       "category": "Video & Scriptwriting",
-      "path": "skills/shorts-script-writer/SKILL.md",
-      "description": "Turn a creator's raw, messy script, voice-note transcript, rough idea or bullet points into a polished, spoken-style script for YouTube Shorts, Instagram Reels or TikTok, under 60 seconds, in natural Indian English. Use this whenever the user pastes ..."
+      "triggers": "`/reels`, `modify`, `rewrite`",
+      "description": "Turn a creator's raw, messy script, voice-note transcript, rough idea or bullet points into a polished, spoken-style script for YouTube Shorts, Instagram Reels or TikTok, under 60 seconds, in natural Indian English. Use this whenever the user pastes a raw script and says \"modify\", \"rewrite\", \"polish\", \"make it flow\", \"make it better\", \"under 1 min\", \"for shorts/reels\", or asks for a hook, storytelling flow, outcome, benefit, experience, CTA or a script from a topic, even if they never say the word \"skill\" or \"script writing\". Also use when the user says \"do the same for this script\" after an earlier Shorts rewrite in the conversation.",
+      "path": "skills/shorts-script-writer/SKILL.md"
     },
     {
       "name": "sparke-codestyle",
-      "aliases": [],
-      "category": "Software Development & Architecture",
-      "path": "skills/sparke-codestyle/SKILL.md",
-      "description": "Kanchan's Spark.E backend codestyle guide. Enforces exact patterns from the live codebase: ESM imports, asyncHandler wrapper, ApiError/ApiResponse classes, Zod safeParse validation, named exports, Mongoose + Prisma dual-DB conventions, BullMQ queue p..."
+      "category": "Backend Architecture",
+      "triggers": "`/ApiResponse`, `/folder`, `/Express`",
+      "description": "Kanchan's Spark.E backend codestyle guide. Enforces exact patterns from the live codebase: ESM imports, asyncHandler wrapper, ApiError/ApiResponse classes, Zod safeParse validation, named exports, Mongoose + Prisma dual-DB conventions, BullMQ queue patterns, logger usage, and file/folder naming. Use this skill whenever writing or editing any Node.js/Express backend code for the Spark.E project \u2014 controllers, routes, middlewares, validators, services, models, workers, or queue files. Trigger on phrases like \"write a controller\", \"add a route\", \"new service\", \"follow my style\", \"/codestyle\", or any Spark.E backend code task.",
+      "path": "skills/sparke-codestyle/SKILL.md"
+    },
+    {
+      "name": "update-claude-skills",
+      "category": "Repo & Skill Ops",
+      "triggers": "`/github`, `/kanchan-nath`, `/claude-code-skills`",
+      "description": "Automatically ingests any new or updated AI agent skill into Kanchan's GitHub repository https://github.com/kanchan-nath/claude-code-skills. Trigger this skill whenever Kanchan attaches or shares a skill file (SKILL.md, .skill zip archive, or folder), asks to 'update skill', 'add this skill to my repo', 'upload skill to github', or invokes '/update-claude-skills'. Handles extracting/placing files into skills/<skill-name>/, running sync_skills.py, updating README.md and skills.json, running CI validation, and pushing to GitHub origin main.",
+      "path": "skills/update-claude-skills/SKILL.md"
     }
   ]
 }
